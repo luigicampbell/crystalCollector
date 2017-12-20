@@ -13,7 +13,7 @@ h1{
 }
 .wrapper{
   font-size: 100px;
-  text-shadow: 2px 2px #eceff1;
+  text-shadow: 2px 1px #eceff1;
   background-color: #40c4ff;
   color: white;
   display: grid;
@@ -36,5 +36,16 @@ h1{
   grid-column: 1 / 3;
   background-color: #00e5ff;
   padding: 50px;
-
+}
+#connect{
+  text-align: center;
+  text-shadow: 2px 1px #eceff1;
+}
+#connect a :hover{
+  opacity: 50%;
+}
+.container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
