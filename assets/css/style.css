@@ -46,12 +46,12 @@ h1, h2{
   object-fit: cover;
 }
 .auth-image{
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 170px;
+  max-width: 170px;
 }
 .networking{
   opacity: 1;
 }
- .networking:hover{
+ .auth-image:hover, .networking:hover{
   opacity: .5;
 }
