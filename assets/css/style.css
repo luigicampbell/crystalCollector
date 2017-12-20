@@ -2,13 +2,12 @@
   /* background-color: #84ffff; */
 }
 
-h1{
+h1, h2{
   text-align: center;
   text-shadow: 2px 2px #eceff1;
   color: #40c4ff;
   font-size: 100px;
-  padding: 50px;
-
+  padding: 40px;
 
 }
 .wrapper{
@@ -40,17 +39,19 @@ h1{
 #connect{
   text-align: center;
   text-shadow: 2px 1px #eceff1;
-  padding: 50px;
-}
-#connect a :hover{
-  opacity: 50%;
 }
 .container > div > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .auth-image{
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 150px;
+  max-width: 150px;
+}
+.networking{
+  opacity: 1;
+}
+ .networking:hover{
+  opacity: .5;
 }

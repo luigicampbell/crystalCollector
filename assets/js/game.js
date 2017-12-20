@@ -34,4 +34,7 @@ $('#crystal1').text(crystal1());
 $('#crystal2').text(crystal2());
 $('#crystal3').text(crystal3());
 $('#crystal4').text(crystal4());
-console.log();
+console.log(crystal1());
+console.log(crystal2());
+console.log(crystal3());
+console.log(crystal4());
