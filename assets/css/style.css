@@ -3,13 +3,13 @@ h1, h2{
   text-align: center;
   text-shadow: 2px 2px #eceff1;
   color: #40c4ff;
-  font-size: 100px;
+  font-size: 90px;
   padding: 40px;
 
 }
 .wrapper{
   font-family: 'Fascinate', cursive;
-  font-size: 100px;
+  font-size: 80px;
   text-shadow: 2px 1px #18ffff;
   background-color: #40c4ff;
   color: white;
@@ -58,4 +58,8 @@ h1, h2{
   font-weight: 900px;
   color: #e1f5fe ;
   text-shadow: 2px 1px #18ffff ;
+}
+#userTotal{
+  transition:opacity 0.4s linear;
+  border-color: #ffe082;
 }
