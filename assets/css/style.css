@@ -1,8 +1,5 @@
-*{
-  /* background-color: #84ffff; */
-}
-
 h1, h2{
+  font-family: 'Fascinate', cursive;
   text-align: center;
   text-shadow: 2px 2px #eceff1;
   color: #40c4ff;
@@ -11,12 +8,12 @@ h1, h2{
 
 }
 .wrapper{
+  font-family: 'Fascinate', cursive;
   font-size: 100px;
-  text-shadow: 2px 1px #eceff1;
+  text-shadow: 2px 1px #18ffff;
   background-color: #40c4ff;
   color: white;
   display: grid;
-  grid-gap: 5px;
   grid-template-columns: 50% 50%;
   grid-template-rows: 25% 25% 25% 25%;
   text-align: center;
@@ -54,4 +51,11 @@ h1, h2{
 }
  .auth-image:hover, .networking:hover{
   opacity: .5;
+}
+#randomNumber{
+  padding-left: 60px;
+  padding-right: 60px;
+  font-weight: 900px;
+  color: #e1f5fe ;
+  text-shadow: 2px 1px #18ffff ;
 }

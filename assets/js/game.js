@@ -1,40 +1,40 @@
-// Logic for Crystals
-var crystal1 = function(){
-  var a = Math.floor((Math.random() * 120) + 19);
-  return a;
-  console.log(a);
+//Variables
+var total = 0;
+var win = 0;
+var lose = 0;
+
+
+// Logic for Crystals use array to store crystals
+//for loop that iterates through each index of the crystal array
+//
+//access each index [i], then perform Math.random function for each crystal
+//
+var crystalArr =[];
+while(crystalArr.length < 4){
+  var randomCrystalValue = Math.floor(Math.random()*12) + 1;
+  if (crystalArr.indexOf(randomCrystalValue) > -1) continue;
+
+  //randomizes value of crystal
+  crystalArr[crystalArr.length] = randomCrystalValue;
 }
 
-var crystal2 = function(){
-  var a = Math.floor((Math.random() * 120) + 19);
-  return a;
-  console.log(a);
-}
+console.log(crystalArr);
 
-var crystal3 = function(){
-  var a = Math.floor((Math.random() * 120) + 19);
-  return a;
-  console.log(a);
-}
-
-var crystal4 = function(){
-  var a = Math.floor((Math.random() * 120) + 19);
-  return a;
-  console.log(a);
-}
-
-//Calling the functions for the crystals
-crystal1();
-crystal2();
-crystal3();
-crystal4();
+var randomNumber = Math.floor(Math.random()*101+19);
 
 //printing them in the div
-$('#crystal1').text(crystal1());
-$('#crystal2').text(crystal2());
-$('#crystal3').text(crystal3());
-$('#crystal4').text(crystal4());
-console.log(crystal1());
-console.log(crystal2());
-console.log(crystal3());
-console.log(crystal4());
+$("#randomNumber").text(randomNumber);
+$("#crystal1img").click(function clickCrystal(){
+  total = total + 1;
+  $("#userTotal").text(total);
+
+});console.log(total);
+$("#crystal2img").click(function clickCrystal(){
+  alert(crystalArr[1]);
+});
+$("#crystal3img").click(function clickCrystal(){
+  alert(crystalArr[2]);
+});
+$("#crystal4img").click(function clickCrystal(){
+  alert(crystalArr[3]);
+});

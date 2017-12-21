@@ -3,42 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>Crystal Collector</title>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
   <h1>Crystal Collector</h1>
   <audio autoplay loop>
-	<source src = "assets/audio/bgm.mp3">
-</audio>
-<audio id = "crystal1Sound"><source src = "assets/audio/crystal1.mp3">
-</audio>
-<audio id = "crystal2Sound"><source src = "assets/audio/crystal2.mp3">
-</audio>
-<audio id = "crystal3Sound"><source src = "assets/audio/crystal3.mp3">
-</audio>
-<audio id = "crystal4Sound"><source src = "assets/audio/crystal4.mp3">
-</audio>
-  <div class="wrapper container">
-    <div class = "item1">Instructions</div>
-    <div class="item2"><img id = "crystal1" class="auth-image" src="assets/images/diamond.png"></div>
-    <div class="item2"><img id = "crystal2" class="auth-image" src="assets/images/sapphire.png"></div>
-    <div class="item2"><img id = "crystal3" class="auth-image" src="assets/images/ruby.gif"></div>
-    <div class="item2"><img id = "crystal4" class="auth-image"  src="assets/images/emerald.png"></div>
-    <div class="item6">score</div>
-  </div>
-  <div id="connect">
-    <h2>Connect With Me</h2>
-    <a href="https://github.com/luigicampbell" target="_blank"><img src="assets/images/if_github_square_black_107109.png"   class="networking" alt="Github"></a>
-    <a href="https://www.linkedin.com/in/luigi-campbell-464838149/" target="_blank"><img src="assets/images/if_linkedin_square_color_107091.png"   class="networking" alt="LinkedIn"></a>
-    <a href="https://stackoverflow.com/users/8793814/luigi" target="_blank"><img src="assets/images/if_StackOverflow_273179.png"   class="networking" alt="Stackoverflow"></a>
-  </div>
-</body>
+    <source src = "assets/audio/#.mp3">
+    </audio>
 
-<script type="text/javascript" src="assets/js/game.js"></script>
-</html>
+    <div class="wrapper container">
+      <div class = "item1"><span id = "randomNumber"></span><span id = "userTotal"></span></div>
+      <div class="item2"><img id = "crystal1img" class="auth-image" src="assets/images/diamond.png"></div>
+      <div class="item2"><img id = "crystal2img" class="auth-image" src="assets/images/sapphire.png"></div>
+      <div class="item2"><img id = "crystal3img" class="auth-image" src="assets/images/ruby.gif"></div>
+      <div class="item2"><img id = "crystal4img" class="auth-image"  src="assets/images/emerald.png"></div>
+      <div class="item6">wins losses</div>
+    </div>
+    <div id="connect">
+      <h2>Connect With Me</h2>
+      <a href="https://github.com/luigicampbell" target="_blank"><img src="assets/images/if_github_square_black_107109.png"   class="networking" alt="Github"></a>
+      <a href="https://www.linkedin.com/in/luigi-campbell-464838149/" target="_blank"><img src="assets/images/if_linkedin_square_color_107091.png"   class="networking" alt="LinkedIn"></a>
+      <a href="https://stackoverflow.com/users/8793814/luigi" target="_blank"><img src="assets/images/if_StackOverflow_273179.png"   class="networking" alt="Stackoverflow"></a>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="assets/js/game.js"></script>
+  </html>
