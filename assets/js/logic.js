@@ -49,19 +49,19 @@ function crystalButtons(){
   });
 
   $("#crystal2img").click(function clickCrystal(){
-    addedCrystalvalue = crystalArr[1];
+    addedCrystalvalue = crystal.sapphire.value;
     total = total + addedCrystalvalue;
     $("#userTotal").text(total);
   });
 
   $("#crystal3img").click(function clickCrystal(){
-    addedCrystalvalue = crystalArr[2];
+    addedCrystalvalue = crystal.ruby.value;
     total = total + addedCrystalvalue;
     $("#userTotal").text(total);
   });
 
   $("#crystal4img").click(function clickCrystal(){
-    addedCrystalvalue = crystalArr[3];
+    addedCrystalvalue = crystal.emerald.value;
     total = total + addedCrystalvalue;
     $("#userTotal").text(total);
   });
