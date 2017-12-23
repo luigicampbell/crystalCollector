@@ -37,8 +37,10 @@ console.log(crystal.ruby.value);
 console.log(crystal.emerald.value);
 };
 //Random Number for User to Match
+function generateRandomNumber() {
 randomNumber = Math.floor(Math.random()*101+19);
 $("#matchMe").text(" "+ randomNumber);
+};
 
 //Crystal Buttons attaching Value to Crystal Click
 function crystalButtons(){
@@ -46,26 +48,32 @@ function crystalButtons(){
     addedCrystalvalue = crystal.diamond.value;
     total = total + addedCrystalvalue;
     $("#userTotal").text(total);
-  });
+    checkUserTotal();
+  })
 
   $("#crystal2img").click(function clickCrystal(){
     addedCrystalvalue = crystal.sapphire.value;
     total = total + addedCrystalvalue;
     $("#userTotal").text(total);
-  });
+    checkUserTotal();
+
+  })
 
   $("#crystal3img").click(function clickCrystal(){
     addedCrystalvalue = crystal.ruby.value;
     total = total + addedCrystalvalue;
     $("#userTotal").text(total);
-  });
+    checkUserTotal();
+
+  })
 
   $("#crystal4img").click(function clickCrystal(){
     addedCrystalvalue = crystal.emerald.value;
     total = total + addedCrystalvalue;
     $("#userTotal").text(total);
-  });
-  checkUserTotal();
+    checkUserTotal();
+
+  })
 
 };
 //Checks if User Total Matches Random Number for Win/Lose Condition
@@ -75,12 +83,17 @@ function checkUserTotal(){
     shuffle();
     total = 0;
     $("#losses").text("losses: " + lose);
-  } else if (total =  randomNumber) {
+    generateRandomNumber();
+  } else if (total ===  randomNumber) {
     win ++;
     shuffle();
     total = 0;
     $("#wins").text("wins: " + win);
+    generateRandomNumber();
   }
 };
 //Functions
+generateRandomNumber();
 crystalButtons();
+shuffle();
+//red balloons
