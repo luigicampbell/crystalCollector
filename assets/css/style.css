@@ -52,6 +52,12 @@ h1, h2{
  .auth-image:hover, .networking:hover{
   opacity: .5;
 }
+.pulse {
+  background: red;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  animation: pulse 2s infinite;
+}
 #randomNumber{
   padding-left: 60px;
   padding-right: 60px;

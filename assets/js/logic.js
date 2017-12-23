@@ -35,6 +35,7 @@ console.log(crystal.diamond.value);
 console.log(crystal.sapphire.value);
 console.log(crystal.ruby.value);
 console.log(crystal.emerald.value);
+$("#userTotal").removeClass("pulse");
 };
 //Random Number for User to Match
 function generateRandomNumber() {
@@ -78,18 +79,23 @@ function crystalButtons(){
 };
 //Checks if User Total Matches Random Number for Win/Lose Condition
 function checkUserTotal(){
+  if (total >= randomNumber - 5 ){
+    $("#userTotal").addClass("pulse");
+  }
   if (total > randomNumber) {
     lose ++;
     shuffle();
     total = 0;
-    $("#losses").text("losses: " + lose);
+    $("#losses").text(" losses: " + lose);
     generateRandomNumber();
+    $("#userTotal").text("");
   } else if (total ===  randomNumber) {
     win ++;
     shuffle();
     total = 0;
     $("#wins").text("wins: " + win);
     generateRandomNumber();
+    $("#userTotal").text("");
   }
 };
 //Functions
