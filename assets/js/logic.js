@@ -2,6 +2,7 @@
 var total = 0;
 var win = 0;
 var lose = 0;
+var audio = ["crystal1.mp3", "crystal2.mp3", "crystal3.mp3", "crystal4.mp3"]
 //Crystal Object
 var crystal = {
   diamond:
@@ -27,20 +28,21 @@ var crystal = {
 };
 //Shuffles Values for Crystals
 function shuffle (){
-crystal.diamond.value = Math.floor(Math.random()*12)+1;
-crystal.sapphire.value = Math.floor(Math.random()*12)+1;
-crystal.ruby.value = Math.floor(Math.random()*12)+1;
-crystal.emerald.value = Math.floor(Math.random()*12)+1;
-console.log(crystal.diamond.value);
-console.log(crystal.sapphire.value);
-console.log(crystal.ruby.value);
-console.log(crystal.emerald.value);
-$("#userTotal").removeClass("pulse");
+  crystal.diamond.value = Math.floor(Math.random()*12)+1;
+  crystal.sapphire.value = Math.floor(Math.random()*12)+1;
+  crystal.ruby.value = Math.floor(Math.random()*12)+1;
+  crystal.emerald.value = Math.floor(Math.random()*12)+1;
+  console.log("Diamond: " + crystal.diamond.value);
+  console.log("Sapphire: " + crystal.sapphire.value);
+  console.log("Ruby: " + crystal.ruby.value);
+  console.log("Emerald: " + crystal.emerald.value);
+  console.log("-------------");
+  $("#userTotal").removeClass("pulse");
 };
 //Random Number for User to Match
 function generateRandomNumber() {
-randomNumber = Math.floor(Math.random()*101+19);
-$("#matchMe").text(" "+ randomNumber);
+  randomNumber = Math.floor(Math.random()*101+19);
+  $("#matchMe").text(" "+ randomNumber);
 };
 
 //Crystal Buttons attaching Value to Crystal Click
