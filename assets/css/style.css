@@ -53,10 +53,13 @@ h1, h2{
   opacity: .5;
 }
 .pulse {
-  background: red;
-  cursor: pointer;
-  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  border-radius: 50%;
+  box-shadow: 11px 11px 11px rgba(255,255,255, 0.5);
   animation: pulse 2s infinite;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 3px;
+  padding-bottom: 18px;
 }
 #randomNumber{
   padding-left: 60px;
@@ -65,7 +68,26 @@ h1, h2{
   color: #e1f5fe ;
   text-shadow: 2px 1px #18ffff ;
 }
-#userTotal{
-  transition:opacity 0.4s linear;
-  border-color: #ffe082;
+#sound{
+  gird-column: 1 / 2 ;
+  text-align: center;
+  background-color: #e8f5e9;
+  padding: 5px;
+}
+#bunkShuffle{
+  text-align: center;
+  grid-column: 2 / 3 ;
+  background-color: #b2dfdb;
+  padding-top: 40px;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+  }
 }

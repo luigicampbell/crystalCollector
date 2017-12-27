@@ -10,16 +10,14 @@
 </head>
 <body>
   <h1>Crystal Collector</h1>
-  <audio autoplay loop>
-    <source src = "assets/audio/bgm.mp3">
-    </audio>
-
+  <audio id = "sfx"></audio>
     <div class="wrapper container">
+      <span id = "sound" onclick="stopAudio()">Toggle Sound</span><span id ="bunkShuffle"> Shuffle</span>
       <div class = "item1"><span id = "matchMe"> </span> / <span id = "userTotal"></span></div>
-      <div class="item2"><img id = "crystal1img" class="auth-image" src="assets/images/diamond.png"></div>
-      <div class="item2"><img id = "crystal2img" class="auth-image" src="assets/images/sapphire.png"></div>
-      <div class="item2"><img id = "crystal3img" class="auth-image" src="assets/images/ruby.gif"></div>
-      <div class="item2"><img id = "crystal4img" class="auth-image"  src="assets/images/emerald.png"></div>
+      <div class="item2"><img id = "crystal1img" class="auth-image" onclick="play('assets/audio/crystal1.mp3')" src="assets/images/diamond.png"></div>
+      <div class="item2"><img id = "crystal2img" class="auth-image" onclick="play('assets/audio/crystal2.mp3')" src="assets/images/sapphire.png"></div>
+      <div class="item2"><img id = "crystal3img" class="auth-image" onclick="play('assets/audio/crystal3.mp3')" src="assets/images/ruby.gif"></div>
+      <div class="item2"><img id = "crystal4img" class="auth-image" onclick="play('assets/audio/crystal4.mp3')" src="assets/images/emerald.png"></div>
       <div class="item6"><span id = "wins"></span><span id = "losses"></span></div>
     </div>
     <div id="connect">
@@ -30,6 +28,5 @@
     </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/js/game.js"></script>
   <script type="text/javascript" src="assets/js/logic.js"></script>
   </html>

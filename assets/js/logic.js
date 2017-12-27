@@ -2,7 +2,17 @@
 var total = 0;
 var win = 0;
 var lose = 0;
-var audio = ["crystal1.mp3", "crystal2.mp3", "crystal3.mp3", "crystal4.mp3"]
+//Sound Function for Crysta lButtons
+function play(sound){
+   var audio = document.getElementById("sfx");
+    audio.setAttribute('src', sound);
+   audio.play();
+}
+//Sound Toggle Function
+function stopAudio(){
+   var audio = document.getElementById("sfx");
+   audio.pause();
+}
 //Crystal Object
 var crystal = {
   diamond:
