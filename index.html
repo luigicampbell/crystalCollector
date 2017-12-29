@@ -9,24 +9,45 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h1>Crystal Collector</h1>
-  <audio id = "sfx"></audio>
-    <div class="wrapper container">
-      <span id = "sound" onclick="stopAudio()">Toggle Sound</span><span id ="bunkShuffle"> Shuffle</span>
-      <div class = "item1"><span id = "matchMe"> </span> / <span id = "userTotal"></span></div>
-      <div class="item2"><img id = "crystal1img" class="auth-image" onclick="play('assets/audio/crystal1.mp3')" src="assets/images/diamond.png"></div>
-      <div class="item2"><img id = "crystal2img" class="auth-image" onclick="play('assets/audio/crystal2.mp3')" src="assets/images/sapphire.png"></div>
-      <div class="item2"><img id = "crystal3img" class="auth-image" onclick="play('assets/audio/crystal3.mp3')" src="assets/images/ruby.gif"></div>
-      <div class="item2"><img id = "crystal4img" class="auth-image" onclick="play('assets/audio/crystal4.mp3')" src="assets/images/emerald.png"></div>
-      <div class="item6"><span id = "wins"></span><span id = "losses"></span></div>
+  <!--Curtain Effect for Rules-->
+  <div class = "curtain">
+    <!--Curtain Wrapper-->
+    <div class = "curtain-wrapper">
+      <!--Click Function-->
+      <input id="bgm" type="checkbox" checked>
+      <!--Curtain Panel Left-->
+      <div class = "curtain-panel curtain-panel-left">
+        <h1>Choose a crystal and try</h1>
+      </div>
+      <!--Main Content-->
+      <div class = "curtain-main-content">
+        <h1>Crystal Collector</h1>
+        <audio id = "sfx"></audio>
+        <div class="wrapper container">
+          <span id = "sound" onclick="stopAudio()">Toggle Sound</span><span id ="bunkShuffle"> Shuffle</span>
+          <div class = "item1"><span id = "matchMe"> </span> / <span id = "userTotal"></span></div>
+          <div class="item2"><img id = "crystal1img" class="auth-image" onclick="play('assets/audio/crystal1.mp3')" src="assets/images/diamond.png"></div>
+          <div class="item2"><img id = "crystal2img" class="auth-image" onclick="play('assets/audio/crystal2.mp3')" src="assets/images/sapphire.png"></div>
+          <div class="item2"><img id = "crystal3img" class="auth-image" onclick="play('assets/audio/crystal3.mp3')" src="assets/images/ruby.gif"></div>
+          <div class="item2"><img id = "crystal4img" class="auth-image" onclick="play('assets/audio/crystal4.mp3')" src="assets/images/emerald.png"></div>
+          <div class="item6"><span id = "wins"></span><span id = "losses"></span></div>
+          <div id="connect">
+            <a href="https://github.com/luigicampbell" target="_blank"><img src="assets/images/if_github_square_black_107109.png"   class="networking" alt="Github"></a>
+            <a href="https://www.linkedin.com/in/luigi-campbell-464838149/" target="_blank"><img src="assets/images/if_linkedin_square_color_107091.png"   class="networking" alt="LinkedIn"></a>
+            <a href="https://stackoverflow.com/users/8793814/luigi" target="_blank"><img src="assets/images/if_StackOverflow_273179.png"   class="networking" alt="Stackoverflow"></a>
+          </div>
+        </div>
+        <!--Curtain Main Content-->
+      </div>
+      <div class = "curtain-panel curtain-panel-right">
+        to match it to the Number on the left
+        <!--Curtain Panel-->
+      </div>
+      <!--Curtain Wrapper-->
     </div>
-    <div id="connect">
-      <h2>Connect With Me</h2>
-      <a href="https://github.com/luigicampbell" target="_blank"><img src="assets/images/if_github_square_black_107109.png"   class="networking" alt="Github"></a>
-      <a href="https://www.linkedin.com/in/luigi-campbell-464838149/" target="_blank"><img src="assets/images/if_linkedin_square_color_107091.png"   class="networking" alt="LinkedIn"></a>
-      <a href="https://stackoverflow.com/users/8793814/luigi" target="_blank"><img src="assets/images/if_StackOverflow_273179.png"   class="networking" alt="Stackoverflow"></a>
-    </div>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/js/logic.js"></script>
-  </html>
+    <!--End Curtain-->
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/logic.js"></script>
+</html>

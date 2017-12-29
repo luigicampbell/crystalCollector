@@ -11,7 +11,7 @@ function play(sound){
 //Sound Toggle Function
 function stopAudio(){
    var audio = document.getElementById("sfx");
-   audio.pause();
+   audio.stop();
 }
 //Crystal Object
 var crystal = {
