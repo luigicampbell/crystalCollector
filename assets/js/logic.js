@@ -1,19 +1,28 @@
-//Variables
+// Variables
 var total = 0;
 var win = 0;
 var lose = 0;
-//Sound Function for Crysta lButtons
+
+// Crystal Image src's
+var crystalImages =[
+  "assets/images/diamond.png",
+  "assets/images/sapphire.png",
+  "assets/images/ruby.gif",
+  "assets/images/emerald.png"
+];
+
+// Sound Function for Crysta lButtons
 function play(sound){
-   var audio = document.getElementById("sfx");
-    audio.setAttribute('src', sound);
-   audio.play();
+  var audio = document.getElementById("sfx");
+  audio.setAttribute('src', sound);
+  audio.play();
 }
-//Sound Toggle Function
+// Sound Toggle Function
 function stopAudio(){
-   var audio = document.getElementById("sfx");
-   audio.stop();
+  var audio = document.getElementById("sfx");
+  audio.stop();
 }
-//Crystal Object
+// Crystal Object
 var crystal = {
   diamond:
   {
@@ -36,20 +45,38 @@ var crystal = {
     value: 0
   }
 };
-//Shuffles Values for Crystals
+
+
+// Shuffles Crystals
+function shuffleCrystals (){
+  $("#crystal1img")
+                  .attr('src',
+                  crystalImages[Math.floor(Math.random()*crystalImages.length)] );
+  $("#crystal2img")
+                  .attr('src',
+                  crystalImages[Math.floor(Math.random()*crystalImages.length)] );
+  $("#crystal3img")
+                  .attr('src',
+                  crystalImages[Math.floor(Math.random()*crystalImages.length)] );
+  $("#crystal4img")
+                  .attr('src',
+                  crystalImages[Math.floor(Math.random()*crystalImages.length)] );
+};
+
+// Shuffles Values for Crystals
 function shuffle (){
-  crystal.diamond.value = Math.floor(Math.random()*12)+1;
-  crystal.sapphire.value = Math.floor(Math.random()*12)+1;
-  crystal.ruby.value = Math.floor(Math.random()*12)+1;
-  crystal.emerald.value = Math.floor(Math.random()*12)+1;
-  console.log("Diamond: " + crystal.diamond.value);
-  console.log("Sapphire: " + crystal.sapphire.value);
-  console.log("Ruby: " + crystal.ruby.value);
-  console.log("Emerald: " + crystal.emerald.value);
+  crystal.diamond.value = Math.floor(Math.random()*12)+2;
+  crystal.sapphire.value = Math.floor(Math.random()*12)+2;
+  crystal.ruby.value = Math.floor(Math.random()*12)+2;
+  crystal.emerald.value = Math.floor(Math.random()*12)+2;
+  console.log("TL: " + crystal.diamond.value);
+  console.log("TR: " + crystal.sapphire.value);
+  console.log("BL: " + crystal.ruby.value);
+  console.log("BR: " + crystal.emerald.value);
   console.log("-------------");
   $("#userTotal").removeClass("pulse");
 };
-//Random Number for User to Match
+// Random Number for User to Match
 function generateRandomNumber() {
   randomNumber = Math.floor(Math.random()*101+19);
   $("#matchMe").text(" "+ randomNumber);
@@ -89,7 +116,7 @@ function crystalButtons(){
   })
 
 };
-//Checks if User Total Matches Random Number for Win/Lose Condition
+// Checks if User Total Matches Random Number for Win/Lose Condition
 function checkUserTotal(){
   if (total >= randomNumber - 5 ){
     $("#userTotal").addClass("pulse");
@@ -99,19 +126,29 @@ function checkUserTotal(){
     shuffle();
     total = 0;
     $("#losses").text(" losses: " + lose);
+    $("#instructions")
+                    .addClass("pulse")
+                    .text("Nice Try!");
     generateRandomNumber();
+    shuffleCrystals ();
     $("#userTotal").text("");
   } else if (total ===  randomNumber) {
     win ++;
     shuffle();
     total = 0;
+    $("#instructions")
+    // Change this to a background animation
+                    .addClass("pulse")
+                    .text("Awesome Job!");
     $("#wins").text("wins: " + win);
     generateRandomNumber();
+    shuffleCrystals ();
     $("#userTotal").text("");
   }
 };
-//Functions
+// Functions
+shuffleCrystals();
 generateRandomNumber();
 crystalButtons();
 shuffle();
-//red balloons
+// red balloons
