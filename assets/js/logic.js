@@ -47,21 +47,34 @@ var crystal = {
 };
 
 
+// Make an empty array to store shuffled crystals
+let shuffledCrystals = [];
+
 // Shuffles Crystals
 function shuffleCrystals (){
+
+  for (var i=0; i<5; i++) {
+      shuffledCrystals.push(crystalImages.splice(Math.random()*(crystalImages.length-1),1).pop());
+  }
+
+
+};
+
+// Populates Dom with Crystals
+function populateCrystals(){
   $("#crystal1img")
                   .attr('src',
-                  crystalImages[Math.floor(Math.random()*crystalImages.length)] );
+                  shuffledCrystals[0] );
   $("#crystal2img")
                   .attr('src',
-                  crystalImages[Math.floor(Math.random()*crystalImages.length)] );
+                  shuffledCrystals[1] );
   $("#crystal3img")
                   .attr('src',
-                  crystalImages[Math.floor(Math.random()*crystalImages.length)] );
+                  shuffledCrystals[2] );
   $("#crystal4img")
                   .attr('src',
-                  crystalImages[Math.floor(Math.random()*crystalImages.length)] );
-};
+                  shuffledCrystals[3] );
+}
 
 // Shuffles Values for Crystals
 function shuffle (){
@@ -131,6 +144,7 @@ function checkUserTotal(){
                     .text("Nice Try!");
     generateRandomNumber();
     shuffleCrystals ();
+    populateCrystals();
     $("#userTotal").text("");
   } else if (total ===  randomNumber) {
     win ++;
@@ -143,11 +157,13 @@ function checkUserTotal(){
     $("#wins").text("wins: " + win);
     generateRandomNumber();
     shuffleCrystals ();
+    populateCrystals();
     $("#userTotal").text("");
   }
 };
 // Functions
 shuffleCrystals();
+populateCrystals();
 generateRandomNumber();
 crystalButtons();
 shuffle();
