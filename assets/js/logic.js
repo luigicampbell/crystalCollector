@@ -2,6 +2,7 @@
 var total = 0;
 var win = 0;
 var lose = 0;
+var isPlayingBGM = false;
 
 // Crystal Image src's
 var crystalImages =[
@@ -16,6 +17,11 @@ function play(sound){
   var audio = document.getElementById("sfx");
   audio.setAttribute('src', sound);
   audio.play();
+  let bgm = document.getElementById('bgm');
+  if(!isPlayingBGM) {
+    bgm.setAttribute('src', 'assets/audio/bgm.mp3');
+    isPlayingBGM = true;
+  }
 }
 // Sound Toggle Function
 function stopAudio(){
